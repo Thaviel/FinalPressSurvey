@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -19,6 +20,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+		
 
         <div class="header-container">
             <header class="wrapper clearfix">
@@ -37,9 +39,23 @@
 
                 <article>
                     <header>
-                        <h1>article header h1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                    </header>
+                        <!--  <d?php
+							 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+							 {
+								  ?>
+							--> 
+								 <h1>Member Area</h1>
+								 <p> Thanks for logging in! You are <code><?=$_SESSION['Username']?></code>.</p>
+								  
+							<!--	 <d?php
+								 }
+						 else{ ?>
+						 <p> nah </p>
+						 <d?php
+						 }
+						 ?>
+						 -->
+					</header>
                     <section>
                         <h2>article section h2</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
