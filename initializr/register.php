@@ -27,8 +27,8 @@
             <h1 class="title">h1.title</h1>
             <nav>
                 <ul>
-                    <li><a href="#">nav ul li a</a></li>
-                    <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">surveys</a></li>
+                        <li><a href="#">account</a></li>
                 </ul>
             </nav>
         </header>
@@ -71,7 +71,7 @@
 
                 <footer>
                     <h3>article footer h3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
+                    <p>this is where I keep my feet</p>
                 </footer>
             </article>
 

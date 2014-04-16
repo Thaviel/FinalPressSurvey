@@ -27,8 +27,8 @@
             <h1 class="title">h1.title</h1>
             <nav>
                 <ul>
-                    <li><a href="#">nav ul li a</a></li>
-                    <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">surveys</a></li>
+                        <li><a href="#">account</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,13 +39,9 @@
 
             <article>
                 <header>
-                    <h1>Register</h1>
+                    <h1>Login!</h1>
                 </header>
 
-                <section>
-                    <p> <a href="register.php">New User?</a>  </p>
-                    
-                </section>
 
                 <section>
 
@@ -57,20 +53,24 @@
                             <label for='username'>UserName*:</label>
                             <input type='text' name='username' id='username' maxlength="50" />
 
+
+
                             <label for='password'>Password*:</label>
                             <input type='password' name='password' id='password' maxlength="50" />
 
-                            <input type='submit' name='Submit' value='Submit' />
-                            
+                            <input type='submit' name='Submit' value='Login' />
+
                         </fieldset>
                     </form>
 
+                    <section>
+                        <p><a href="register.php">New User?</a>  </p>
+
+                    </section>
+
                 </section>
 
-                <footer>
-                    <h3>article footer h3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-                </footer>
+
             </article>
 
         </div>
