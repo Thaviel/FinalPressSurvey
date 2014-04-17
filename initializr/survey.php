@@ -30,7 +30,7 @@
             <img src="img/logo.png" alt="Survey" >
             <nav>
                 <ul>
-                    <li><a href="home.php">surveys</a></li>
+                    <li><a href="index.php">surveys</a></li>
                     <li><a href="login.php">account</a></li>
                 </ul>
             </nav>
