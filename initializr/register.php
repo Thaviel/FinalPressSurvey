@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<?php require'connect.php';?>
+
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -28,7 +30,7 @@
             <nav>
                 <ul>
                         <li><a href="#">surveys</a></li>
-                        <li><a href="#">account</a></li>
+                        <li><a href="login.php">account</a></li>
                 </ul>
             </nav>
         </header>

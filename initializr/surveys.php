@@ -1,4 +1,5 @@
-﻿<?php require'connect.php';?>
+<?php require'connect.php';?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -22,16 +23,14 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-		
-
 
     <div class="header-container">
         <header class="wrapper clearfix">
-            <h1 class="title">Surveys</h1>
+            <h1 class="title">h1.title</h1>
             <nav>
                 <ul>
-                        <li><a href="#">surveys</a></li>
-                        <li><a href="login.php">account</a></li>
+                    <li><a href="#">surveys</a></li>
+                    <li><a href="login.php">account</a></li>
                 </ul>
             </nav>
         </header>
@@ -42,39 +41,12 @@
 
             <article>
                 <header>
-                    <h1>Login!</h1>
-                </header>
+                    <h1>Select a survey to complete:</h1>
 
-                <section>
-
-                    <form id='login' action='checklogin.php' method='post' accept-charset='UTF-8'>
-                        <fieldset>
-                            <legend>Login</legend>
-                            <input type='hidden' name='submitted' id='submitted' value='1' />
-
-                            <label for='Username'>UserName*:</label>
-                            <input type='text' name='username' id='Username' maxlength="50" />
+					
 
 
-
-                            <label for='Password'>Password*:</label>
-                            <input type='password' name='password' id='Password' maxlength="50" />
-
-                            <input type='submit' name='Submit' value='Login' />
-
-                        </fieldset>
-                    </form>
-
-                    <section>
-                        <p><a href="register.php">New User?</a>  </p>
-
-                    </section>
-
-                </section>
-
-
-            </article>
-
+               </article>
         </div>
         <!-- #main -->
     </div>
