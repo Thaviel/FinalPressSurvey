@@ -26,10 +26,10 @@
 
     <div class="header-container">
         <header class="wrapper clearfix">
-            <h1 class="title">Surveys</h1>
+            <h1 class="title">Active Surveys</h1>
             <nav>
                 <ul>
-                    <li><a href="home.php">surveys</a></li>
+                    <li><a href="#">surveys</a></li>
                     <li><a href="login.php">account</a></li>
                 </ul>
             </nav>
@@ -42,21 +42,19 @@
             <article>
                 <header>
                     
-					<h1>Account</h1>
+					<h1>Surveys</h1>
 				<div class="boxed-border">
-					<h2>My Surveys</h2>
 					<?php
-					//display a table of all surveys created by that user
-					
-					//echo $_SESSION['UserID'];
-					$query = "SELECT * FROM survey WHERE user_ID=".$_SESSION['UserID']. ";
+					//display a table of all surveys created by that are currently active
+					//$query = "SELECT * FROM survey WHERE (currentDate-creationDate<10)";
+					$query = "SELECT * FROM survey";
 					$result = mysql_query($query);
 
 echo "<table border='1'>
 <tr>
 <th>Survey</th>
 <th>Active(days remaining)</th>
-<th>View results</th>
+<th>Take Survey</th>
 </tr>";
 
 while($row = mysql_fetch_array($result))
@@ -65,8 +63,8 @@ while($row = mysql_fetch_array($result))
   echo "<td>" . $row['name']."</td>";
   echo "<td>" . $row['dateStamp']."</td>";
   $survID = $row['Survey_ID'];
-  $link= "results.php?key=" . $survID;
-  echo "<td> <a href='$link'>Edit</a> </td>";
+  $link= "survey.php?key=" . $survID;
+  echo "<td> <a href='$link'>Take Survey</a> </td>";
   echo "</tr>";
 }
 echo "</table>";
@@ -97,9 +95,7 @@ echo "</table>";
                     this website is made under the:
                     <br />
                     GNU GENERAL PUBLIC LICENSE
-
 Version 107, 17 June 2014
-
 Copyright (c) 2007 Free Software Foundation, Inc. <a href="http://fsf.org">http://fsf.org</a>
                 </p>
             </div>

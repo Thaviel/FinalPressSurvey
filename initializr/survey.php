@@ -41,47 +41,23 @@
 
             <article>
                 <header>
-                    
-					<h1>Account</h1>
-				<div class="boxed-border">
-					<h2>My Surveys</h2>
-					<?php
-					//display a table of all surveys created by that user
+                    <h1>Name of Survey</h1>
+					<!--form that displays all questions of a survey along with answers-->
+					<form>
+					<p> Question 1: [Question1 Text] </p> 
+					<input id="1A" type="radio" name="Q1"/> [Answer A] </br>
+					<input id="1B" type="radio" name="Q1"/> [Answer B] </br>
+					<input id="1C" type="radio" name="Q1"/> [Answer C] </br>
+					<input id="1D" type="radio" name="Q1"/> [Answer D] </br>
+					<p> Question 2: [Question2 Text] </p> 
+					<input id="2A" type="radio" name="Q2"/> [Answer A] </br>
+					<input id="2B" type="radio" name="Q2"/> [Answer B] </br>
+					<input id="2C" type="radio" name="Q2"/> [Answer C] </br>
+					<input id="2D" type="radio" name="Q2"/> [Answer D] </br>
 					
-					//echo $_SESSION['UserID'];
-					$query = "SELECT * FROM survey WHERE user_ID=".$_SESSION['UserID']. ";
-					$result = mysql_query($query);
-
-echo "<table border='1'>
-<tr>
-<th>Survey</th>
-<th>Active(days remaining)</th>
-<th>View results</th>
-</tr>";
-
-while($row = mysql_fetch_array($result))
-{
-  echo "<tr>";
-  echo "<td>" . $row['name']."</td>";
-  echo "<td>" . $row['dateStamp']."</td>";
-  $survID = $row['Survey_ID'];
-  $link= "results.php?key=" . $survID;
-  echo "<td> <a href='$link'>Edit</a> </td>";
-  echo "</tr>";
-}
-echo "</table>";
-
-
-
-				?>
+					</form>
 					
-				</div>
-				
-				<div class="boxed-border">
-				
-				</div>
-				
-				<a href="logout.php"> Logout </a>
+
 
                </article>
         </div>
@@ -124,4 +100,3 @@ Copyright (c) 2007 Free Software Foundation, Inc. <a href="http://fsf.org">http:
         </script>
 </body>
 </html>
-<?php mysql_close(); ?>

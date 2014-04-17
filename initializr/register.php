@@ -27,7 +27,7 @@
             <h1 class="title">h1.title</h1>
             <nav>
                 <ul>
-                        <li><a href="#">surveys</a></li>
+                        <li><a href="home.php">surveys</a></li>
                         <li><a href="login.php">account</a></li>
                 </ul>
             </nav>

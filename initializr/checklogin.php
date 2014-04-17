@@ -13,7 +13,7 @@ $sql="SELECT * FROM $tbl_name WHERE Username='$myusername' and Password='$mypass
 $result=mysql_query($sql);
 
 //creates a query to find the User_ID currently
-$useridsql="SELECT User_ID FROM (SELECT * FROM $tbl_name WHERE Username='$myusername' and Password='$mypassword') AS q;";
+$useridsql="SELECT User_ID FROM $tbl_name WHERE Username='$myusername' and Password='$mypassword'";
 $useridresult=mysql_query($useridsql);
 
 // Mysql_num_row is counting table row
@@ -26,8 +26,9 @@ if($count){
 $_SESSION['Username'] = $myusername;
 $_SESSION['Password'] = $mypassword;
 $_SESSION['LoggedIn'] = 1;
-//$_SESSION['UserID'] = 2;
-$_SESSION['UserID'] = $useridresult;
+$row = mysql_fetch_array($useridresult);
+$userid = $row[User_ID];
+$_SESSION['UserID'] = $userid;
 header("location:account.php");
 
 

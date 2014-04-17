@@ -69,8 +69,6 @@
 								<label for='Username'>UserName*:</label>
 								<input type='text' name='username' id='Username' maxlength="50" />
 
-
-
 								<label for='Password'>Password*:</label>
 								<input type='password' name='password' id='Password' maxlength="50" />
 
