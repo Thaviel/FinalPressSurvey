@@ -26,7 +26,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">surveys</a></li>
-                        <li><a href="#">account</a></li>
+                        <li><a href="login.php">account</a></li>
                     </ul>
                 </nav>
             </header>
@@ -74,9 +74,20 @@
         </div> <!-- #main-container -->
 
         <div class="footer-container">
-            <footer class="wrapper">
-                <h3>footer</h3>
-            </footer>
+        <footer class="wrapper">
+            <h3>Copyright Statement</h3>
+            <div>
+                <p>
+                    this website is made under the:
+                    <br />
+                    GNU GENERAL PUBLIC LICENSE
+
+Version 107, 17 June 2014
+
+Copyright (c) 2007 Free Software Foundation, Inc. <a href="http://fsf.org">http://fsf.org</a>
+                </p>
+            </div>
+        </footer>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

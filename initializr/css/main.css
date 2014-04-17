@@ -158,7 +158,11 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.main boxed-border {
 
+	outline:#00FF00 solid thick;
+
+	}
 
 
 
