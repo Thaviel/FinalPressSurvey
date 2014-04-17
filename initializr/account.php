@@ -42,7 +42,7 @@
 
             <article>
                 <header>
-                    
+                    <!-- This is where users view the surveys they have released, and review the results-->
 					<h1>Account</h1>
 				<div class="boxed-border">
 					<h2>My Surveys</h2>
@@ -70,21 +70,67 @@ while($row = mysql_fetch_array($result))
   echo "</tr>";
 }
 echo "</table>";
-
-
-
 				?>
 					
 				</div>
-				
+				</br>
+				</br>				
+				<!--This is where users change their password-->
 				<div class="boxed-border">
+				<h2>My Templates</h2>
+				<p>here you can change, create, and release survey templates.</p>
+				<?php
+				//display a table of all surveys created by that user
+				$query= "SELECT * FROM surveytemplate WHERE user_ID=" . $_SESSION['UserID'] . ";";
+				$resulttemplate = mysql_query($query);
+
+echo "<table border='1'>
+<tr>
+<th>Template</th>
+<th>Edit/Publish</th>
+</tr>";
+
+while($row = mysql_fetch_array($resulttemplate))
+{
+  echo "<tr>";
+  echo "<td>" . $row['name']."</td>";
+  $survtemplateID = $row['SurveyTemplate_ID'];
+  echo $survtemplateID;
+  $link= "template.php?key=" . $survtemplateID;
+  echo($link);
+  echo "<td> <a href='$link'>Edit/Publish</a> </td>";
+  echo "</tr>";
+}
+echo "</table>";
+echo "<a href='template.php?key=new'>Add...</a>"
+				?>
 				
+				</div>	
+				</br>
+				</br>
+				<!--This is where users change their password-->
+				<div class="boxed-border">
+					<form id='login' action='changepassword.php' method='post' accept-charset='UTF-8'>
+							<fieldset>
+								<h2>Change Account Password</h2>
+						<input type='hidden' name='submitted' id='submitted' value='1' />
+									<label for='Password1'>Password*:</label>
+									<input type='text' name='password1' id='Password1' maxlength="50" />
+
+									<label for='Password2'>Re-enter Password*:</label>
+									<input type='text' name='password2' id='Password2' maxlength="50" />
+
+						<input type='submit' name='Submit' value='Change Password' />
+
 				</div>
 				
 				<a href="logout.php"> Logout </a>
 
                </article>
         </div>
+		
+		
+
         <!-- #main -->
     </div>
     <!-- #main-container -->

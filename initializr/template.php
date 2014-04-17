@@ -24,7 +24,7 @@
 
     <div class="header-container">
         <header class="wrapper clearfix">
-            <h1 class="title">h1.title</h1>
+            <h1 class="title">Surveys</h1>
             <img src="img/logo.png" alt="Survey" >
             <nav>
                 <ul>
@@ -41,180 +41,158 @@
             <article>
                 <header>
                     <h1>Survey Title</h1>
-
                 </header>
 
-                <input id="Text1" type="text" />
-
-                <h2>Question 1</h2>
-
-                <textarea id="TextArea1" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text2" type="text" />
-
-                <p>B: </p>
-                <input id="Text3" type="text" />
-
-                <p>C: </p>
-                <input id="Text4" type="text" />
-
-                <p>D: </p>
-                <input id="Text5" type="text" />
-
-
-                <h2>Question 2</h2>
-
-                <textarea id="TextArea2" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text6" type="text" />
-
-                <p>B: </p>
-                <input id="Text7" type="text" />
-
-                <p>C: </p>
-                <input id="Text8" type="text" />
-
-                <p>D: </p>
-                <input id="Text9" type="text" />
-
-                <h2>Question 3</h2>
-
-                <textarea id="TextArea3" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text10" type="text" />
-
-                <p>B: </p>
-                <input id="Text11" type="text" />
-
-                <p>C: </p>
-                <input id="Text12" type="text" />
-
-                <p>D: </p>
-                <input id="Text13" type="text" />
-
-                <h2>Question 4</h2>
-
-                <textarea id="TextArea4" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text14" type="text" />
-
-                <p>B: </p>
-                <input id="Text15" type="text" />
-
-                <p>C: </p>
-                <input id="Text16" type="text" />
-
-                <p>D: </p>
-                <input id="Text17" type="text" />
-
-
-
-                <h2>Question 5</h2>
-
-                <textarea id="TextArea5" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text18" type="text" />
-
-                <p>B: </p>
-                <input id="Text19" type="text" />
-
-                <p>C: </p>
-                <input id="Text20" type="text" />
-
-                <p>D: </p>
-                <input id="Text21" type="text" />
-
-                <h2>Question 6</h2>
-
-                <textarea id="TextArea6" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text22" type="text" />
-
-                <p>B: </p>
-                <input id="Text23" type="text" />
-
-                <p>C: </p>
-                <input id="Text24" type="text" />
-
-                <p>D: </p>
-                <input id="Text25" type="text" />
-
-
-                <h2>Question 7</h2>
-
-                <textarea id="TextArea7" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text26" type="text" />
-
-                <p>B: </p>
-                <input id="Text27" type="text" />
-
-                <p>C: </p>
-                <input id="Text28" type="text" />
-
-                <p>D: </p>
-                <input id="Text29" type="text" />
-
-                <h2>Question 8</h2>
-
-                <textarea id="TextArea8" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text30" type="text" />
-
-                <p>B: </p>
-                <input id="Text31" type="text" />
-
-                <p>C: </p>
-                <input id="Text32" type="text" />
-
-                <p>D: </p>
-                <input id="Text33" type="text" />
-
-
-                <h2>Question 9</h2>
-
-                <textarea id="TextArea9" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text34" type="text" />
-
-                <p>B: </p>
-                <input id="Text35" type="text" />
-
-                <p>C: </p>
-                <input id="Text36" type="text" />
-
-                <p>D: </p>
-                <input id="Text37" type="text" />
-
-
-                <h2>Question 10</h2>
-
-                <textarea id="TextArea10" cols="20" rows="2"></textarea>
-
-                <p>A: </p>
-                <input id="Text38" type="text" />
-
-                <p>B: </p>
-                <input id="Text39" type="text" />
-
-                <p>C: </p>
-                <input id="Text40" type="text" />
-
-                <p>D: </p>
-                <input id="Text41" type="text" />
-
-
-                <input id="Submit1" type="submit" value="Save Changes" />
-                <input id="Submit2" type="submit" value="Release Survey" />
+				<form id='login' action='' method='post' accept-charset='UTF-8'>
+                
+					<input id="Title" type="text" />
+
+					<h2>Question 1</h2>
+					<textarea id="TextArea1" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="a1" type="text" />
+					<p>B: </p>
+					<input id="b1" type="text" />
+					<p>C: </p>
+					<input id="c1" type="text" />
+					<p>D: </p>
+					<input id="d1" type="text" />
+
+
+					<h2>Question 2</h2>
+					<textarea id="TextArea2" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="2a" type="text" />
+					<p>B: </p>
+					<input id="2b" type="text" />
+					<p>C: </p>
+					<input id="2c" type="text" />
+					<p>D: </p>
+					<input id="2d" type="text" />
+
+					<h2>Question 3</h2>
+					<textarea id="TextArea3" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="3a" type="text" />
+					<p>B: </p>
+					<input id="3b" type="text" />
+					<p>C: </p>
+					<input id="3c" type="text" />
+					<p>D: </p>
+					<input id="3d" type="text" />
+
+					<h2>Question 4</h2>
+					<textarea id="TextArea4" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="4a" type="text" />
+					<p>B: </p>
+					<input id="4b" type="text" />
+					<p>C: </p>
+					<input id="4c" type="text" />
+					<p>D: </p>
+					<input id="4d" type="text" />
+
+
+
+					<h2>Question 5</h2>
+					<textarea id="TextArea5" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="5a" type="text" />
+					<p>B: </p>
+					<input id="5b" type="text" />
+					<p>C: </p>
+					<input id="5c" type="text" />
+					<p>D: </p>
+					<input id="5d" type="text" />
+
+					<h2>Question 6</h2>
+					<textarea id="TextArea6" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="6a" type="text" />
+					<p>B: </p>
+					<input id="6b" type="text" />
+					<p>C: </p>
+					<input id="6c" type="text" />
+					<p>D: </p>
+					<input id="6d" type="text" />
+
+
+					<h2>Question 7</h2>
+					<textarea id="TextArea7" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="7a" type="text" />
+					<p>B: </p>
+					<input id="7b" type="text" />
+					<p>C: </p>
+					<input id="7c" type="text" />
+					<p>D: </p>
+					<input id="7d" type="text" />
+
+					<h2>Question 8</h2>
+					<textarea id="TextArea8" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="8a" type="text" />
+					<p>B: </p>
+					<input id="8b" type="text" />
+					<p>C: </p>
+					<input id="8c" type="text" />
+					<p>D: </p>
+					<input id="8d" type="text" />
+
+
+					<h2>Question 9</h2>
+					<textarea id="TextArea9" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="9a" type="text" />
+					<p>B: </p>
+					<input id="9b" type="text" />
+					<p>C: </p>
+					<input id="9c" type="text" />
+					<p>D: </p>
+					<input id="9d" type="text" />
+
+
+					<h2>Question 10</h2>
+					<textarea id="TextArea10" cols="60" rows="2"></textarea>
+					<p>A: </p>
+					<input id="10a" type="text" />
+					<p>B: </p>
+					<input id="10b" type="text" />
+					<p>C: </p>
+					<input id="10c" type="text" />
+					<p>D: </p>
+					<input id="10d" type="text" />
+
+					</br>
+					</br>
+					
+					<input type="submit" name="save" value="Save"/>
+					<input type="submit" name="publish" value="Publish"/>
+					<!--If save is clicked, then save
+					<?php 
+					echo"SLAM";
+					if (isset($_POST['save'])) {
+							//if key is new, use an add query
+							if($_GET['key']=='new')
+							{
+								//$addtemplatesql="";
+								//mysql_query($addtemplatesql);
+								echo "Template Added!";
+							}else{
+							echo "Saved Changes!";
+							}
+							//if key is not new, use the value of key as the templateid and update that one.
+					} 
+					else if (isset($_POST['publish'])) 
+					{
+							echo"Publishing guy";
+					} 
+					else 
+					{
+							echo"WTF DUDE GET OUT!";
+					}
+					?>
+				</form>
 
                </article>
         </div>
