@@ -47,9 +47,8 @@
 					<h2>My Surveys</h2>
 					<?php
 					//display a table of all surveys created by that user
+					$query= "SELECT * FROM survey WHERE user_ID=" . $_SESSION['UserID'] . ";";
 					
-					//echo $_SESSION['UserID'];
-					$query = "SELECT * FROM survey WHERE user_ID=".$_SESSION['UserID']. ";
 					$result = mysql_query($query);
 
 echo "<table border='1'>
