@@ -28,6 +28,7 @@
     <div class="header-container">
         <header class="wrapper clearfix">
             <h1 class="title">Surveys</h1>
+            <img src="img/logo.png" alt="Survey" >
             <nav>
                 <ul>
                         <li><a href="#">surveys</a></li>
