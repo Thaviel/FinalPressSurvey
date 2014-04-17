@@ -29,7 +29,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">surveys</a></li>
-                        <li><a href="#">account</a></li>
+                        <li><a href="login.php">account</a></li>
                     </ul>
                 </nav>
             </header>
@@ -41,13 +41,12 @@
                 <article>
                     <header>
                           <?php
-							  if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['username']))
+							  if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 							 {
-							 echo($_SESSION['username']);
+							 echo($_SESSION['Username']);
 								  ?>
 							 
 								 <h1>Member Area</h1>
-								 <p> Thanks for logging in! You are .</p>
 								  
 								 <?php
 								 }

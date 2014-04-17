@@ -1,4 +1,5 @@
-﻿<?php require'connect.php';?>
+<?php require'connect.php';?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -22,84 +23,69 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-		
-
 
     <div class="header-container">
         <header class="wrapper clearfix">
-            <h1 class="title">Surveys</h1>
+            <h1 class="title">Account</h1>
             <nav>
                 <ul>
-                        <li><a href="#">surveys</a></li>
-                        <li><a href="login.php">account</a></li>
+                    <li><a href="#">surveys</a></li>
+                    <li><a href="login.php">account</a></li>
                 </ul>
             </nav>
         </header>
     </div>
-	
 
-<?php
-							  if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
-							 {
-							 header( 'Location: account.php' ) ;
-								  
-							 							  
+    <div class="main-container">
+        <div class="main wrapper clearfix">
 
-								 }
-						 else{
-?>
-						 
+            <article>
+                <header>
+                    
+					<h1> Surveys <?php echo $_SESSION['LoggedIn'] ?></h1>
+				<div class="boxed-border">
+					<h2>My Surveys</h2>
+					<?php
+					//display a table of all surveys created by that user
+					$query = "SELECT * FROM survey WHERE user_ID=2";
+					$result = mysql_query($query);
 
-		
-		<div class="main-container">
-			<div class="main wrapper clearfix">
+echo "<table border='1'>
+<tr>
+<th>Survey</th>
+<th>Active(days remaining)</th>
+<th>View results</th>
+</tr>";
 
-				<article>
-					<header>
-						<h1>Login!</h1>
-					</header>
-
-					<section>
-
-						<form id='login' action='checklogin.php' method='post' accept-charset='UTF-8'>
-							<fieldset>
-								<legend>Login</legend>
-								<input type='hidden' name='submitted' id='submitted' value='1' />
-
-								<label for='Username'>UserName*:</label>
-								<input type='text' name='username' id='Username' maxlength="50" />
-
-
-
-								<label for='Password'>Password*:</label>
-								<input type='password' name='password' id='Password' maxlength="50" />
-
-								<input type='submit' name='Submit' value='Login' />
-
-							</fieldset>
-						</form>
-
-						<section>
-							<p><a href="register.php">New User?</a>  </p>
-
-						</section>
-
-					</section>
+while($row = mysql_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" . $row['name']."</td>";
+  echo "<td>" . $row['dateStamp']."</td>";
+  $survID = $row['Survey_ID'];
+  $link= "results.php?key=" . $survID;
+  echo "<td> <a href='$link'>Edit</a> </td>";
+  echo "</tr>";
+}
+echo "</table>";
 
 
-				</article>
 
-			</div>
-		
-			<!-- #main -->
-		
-		</div>
-		
-		<!-- #main-container -->
-	<?php 
-	}
-	?>
-	
+				?>
+					
+				</div>
+				
+				<div class="boxed-border">
+				
+				</div>
+				
+				<a href="logout.php"> Logout </a>
+
+               </article>
+        </div>
+        <!-- #main -->
+    </div>
+    <!-- #main-container -->
 
     <div class="footer-container">
         <footer class="wrapper">
@@ -125,3 +111,4 @@
         </script>
 </body>
 </html>
+<?php mysql_close(); ?>
