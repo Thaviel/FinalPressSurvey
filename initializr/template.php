@@ -168,32 +168,92 @@
 					
 					<input type="submit" name="save" value="Save"/>
 					<input type="submit" name="publish" value="Publish"/>
-					<!--If save is clicked, then save
-					<?php 
-					echo"SLAM";
+					<!--If save is clicked, then save-->
+					
+				</form>
+
+				<?php 
 					if (isset($_POST['save'])) {
 							//if key is new, use an add query
 							if($_GET['key']=='new')
 							{
-								//$addtemplatesql="";
-								//mysql_query($addtemplatesql);
+							//sql statement to add what the user inputted into the table
+								$addtemplatesql="
+								
+								INSERT INTO  `survey`.`surveytemplate` (
+`SurveyTemplate_ID` ,
+`user_ID` ,
+`name` ,
+`q1text` ,
+`q1a` ,
+`q1b` ,
+`q1c` ,
+`q1d` ,
+`q2text` ,
+`q2a` ,
+`q2b` ,
+`q2c` ,
+`q2d` ,
+`q3text` ,
+`q3a` ,
+`q3b` ,
+`q3c` ,
+`q3d` ,
+`q4text` ,
+`q4a` ,
+`q4b` ,
+`q4c` ,
+`q4d` ,
+`q5text` ,
+`q5a` ,
+`q5b` ,
+`q5c` ,
+`q5d` ,
+`q6text` ,
+`q6a` ,
+`q6b` ,
+`q6c` ,
+`q6d` ,
+`q7text` ,
+`q7a` ,
+`q7b` ,
+`q7c` ,
+`q7d` ,
+`q8text` ,
+`q8a` ,
+`q8b` ,
+`q8c` ,
+`q8d` ,
+`q9text` ,
+`q9a` ,
+`q9b` ,
+`q9c` ,
+`q9d` ,
+`q10text` ,
+`q10a` ,
+`q10b` ,
+`q10c` ,
+`q10d`
+)
+VALUES (
+NULL ,  '2',  '[name]',  'q1',  '1a',  '1b',  '1c',  '1d',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing', 'thing',  'thing',  'thing',  'thing',  'vthing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing', 'thing',  'thing',  'thing',  'thing'
+);
+
+								
+								";
+								echo $addtemplatesql;
+								mysql_query($addtemplatesql);
 								echo "Template Added!";
 							}else{
 							echo "Saved Changes!";
 							}
-							//if key is not new, use the value of key as the templateid and update that one.
+							//if key is not new, use the value of key as the //templateid and update that one.
 					} 
 					else if (isset($_POST['publish'])) 
 					{
-							echo"Publishing guy";
+							echo"Survey has been published";
 					} 
-					else 
-					{
-							echo"WTF DUDE GET OUT!";
-					}
-					?>
-				</form>
-
+				?>
                </article>
         </div>
         <!-- #main -->
