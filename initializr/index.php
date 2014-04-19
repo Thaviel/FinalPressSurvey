@@ -80,7 +80,6 @@ echo "</table>";
 				
 				</div>
 				
-				<a href="logout.php"> Logout </a>
 
                </article>
         </div>
