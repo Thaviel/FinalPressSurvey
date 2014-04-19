@@ -47,7 +47,7 @@
 
                 <section>
 
-                    <form id='register' action='register.php' method='post'
+                    <form id='register' action='reg.php' method='post'
                         accept-charset='UTF-8'>
                         <fieldset>
                             <legend>Register</legend>
@@ -69,11 +69,6 @@
                     </form>
 
                 </section>
-
-                <footer>
-                    <h3>article footer h3</h3>
-                    <p>this is where I keep my feet</p>
-                </footer>
             </article>
 
         </div>

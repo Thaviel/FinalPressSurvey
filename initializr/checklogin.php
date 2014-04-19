@@ -12,15 +12,16 @@ $mypassword = mysql_real_escape_string($mypassword);
 $sql="SELECT * FROM $tbl_name WHERE Username='$myusername' and Password='$mypassword'";
 $result=mysql_query($sql);
 
-//creates a query to find the User_ID currently
-$useridsql="SELECT User_ID FROM $tbl_name WHERE Username='$myusername' and Password='$mypassword'";
-$useridresult=mysql_query($useridsql);
 
 // Mysql_num_row is counting table row
 $count=mysql_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count){
+
+//creates a query to find the User_ID currently
+$useridsql="SELECT User_ID FROM $tbl_name WHERE Username='$myusername' and Password='$mypassword'";
+$useridresult=mysql_query($useridsql);
 
 // Register $myusername, $mypassword
 $_SESSION['Username'] = $myusername;
@@ -34,6 +35,6 @@ header("location:account.php");
 
 }
 else {
-echo "Wrong Username or Password, sorry.";
+echo "Wrong Username or Password, sorry." . '<a href="javascript:history.back()">Back</a>' ;
 }
 ?>
