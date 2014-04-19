@@ -18,7 +18,7 @@ $sql="SELECT * FROM $tbl_name WHERE Username='$myusername'";
 $result=mysql_query($sql);
 $count=mysql_num_rows($result);
 if($count){
-	echo'your username is taken try '. $myusername . rand() . '<a href="javascript:history.back()">Back</a>';
+	echo'your username is taken try '. $myusername. " " . rand() . ' <a href="javascript:history.back()">Back</a>';
 
 	} else {
 
@@ -31,8 +31,7 @@ if($count){
 		
 			}else{
 			
-			$sql = "INSERT INTO `survey`.`user` (`User_ID`, `username`, `password`, `email`) VALUES (NULL, \'$myusername\', \'$mypassword\', \'$myemail\');";
-			echo $sql;
+			$sql = "INSERT INTO `survey`.`user` (`User_ID`, `username`, `password`, `email`) VALUES (NULL, '$myusername', '$mypassword', '$myemail');";
 			mysql_query($sql);
 			
 			}
