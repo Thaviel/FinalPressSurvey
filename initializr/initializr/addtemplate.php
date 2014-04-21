@@ -56,6 +56,7 @@ $d10=$_POST['10d'];
 
 
 // To protect MySQL injection (more detail about MySQL injection)
+
 $name = stripslashes($name);
 $name = mysql_real_escape_string($name);
 
@@ -214,66 +215,66 @@ $d10 = mysql_real_escape_string($d10);
 
 //concatinate a string together to submit to sql
 $addtemplatesql="
-	INSERT INTO  `survey`.`surveytemplate` (
-	`SurveyTemplate_ID` , `user_ID` , `name` , `q1text` , `q1a` , `q1b` ,`q1c` ,`q1d` ,`q2text` ,`q2a` ,`q2b` ,`q2c` ,`q2d` ,`q3text` ,`q3a` ,`q3b` ,`q3c` ,`q3d` ,`q4text` ,`q4a` ,`q4b` ,`q4c` ,`q4d` ,`q5text` ,`q5a` ,`q5b` ,`q5c` ,`q5d` ,`q6text` ,`q6a` ,`q6b` ,`q6c` ,`q6d` ,`q7text` ,`q7a` ,`q7b` ,`q7c` ,`q7d` ,`q8text` ,`q8a` ,`q8b` ,`q8c` ,`q8d` ,`q9text` ,`q9a` ,`q9b` ,`q9c` ,`q9d` ,`q10text` ,`q10a` ,`q10b` ,`q10c` ,`q10d`)
-	VALUES (
-	
-	    NULL ,
-	    '". $_SESSION['UserID'] ."',
-	    '$name',
-	    '$q1',
-	    '$a1',
-	    '$b1',
-	    '$c1',
-	    '$d1',
-	    '$q2',
-	    '$a2',
-	    '$b2',
-	    '$c2',
-	    '$d2',
-	    '$q3',
-	    '$a3',
-	    '$b3',
-	    '$c3',
-	    '$d3',
-	    '$q4',
-	    '$a4',
-	    '$b4',
-	    '$c4',
-	    '$d4',
-	    '$q5',
-	    '$a5',
-	    '$b5',
-	    '$c5',
-	    '$d5',
-	    '$q6',
-	    '$a6',
-	    '$b6',
-	    '$c6',
-	    '$d6',
-	    '$q7',
-	    '$a7',
-	    '$b7',
-	    '$c7',
-	    '$d7',
-	    '$q8',
-	    '$a8',
-	    '$b8',
-	    '$c8',
-	    '$d8',
-	    '$q9',
-	    '$a9',
-	    '$b9',
-	    '$c9',
-	    '$d9',
-	    '$q10',
-	    '$a10',
-	    '$b10',
-	    '$c10',
-	    '$d10'
-		);
-	";
+INSERT INTO  `survey`.`surveytemplate` (
+`SurveyTemplate_ID` , `user_ID` , `name` , `q1text` , `q1a` , `q1b` ,`q1c` ,`q1d` ,`q2text` ,`q2a` ,`q2b` ,`q2c` ,`q2d` ,`q3text` ,`q3a` ,`q3b` ,`q3c` ,`q3d` ,`q4text` ,`q4a` ,`q4b` ,`q4c` ,`q4d` ,`q5text` ,`q5a` ,`q5b` ,`q5c` ,`q5d` ,`q6text` ,`q6a` ,`q6b` ,`q6c` ,`q6d` ,`q7text` ,`q7a` ,`q7b` ,`q7c` ,`q7d` ,`q8text` ,`q8a` ,`q8b` ,`q8c` ,`q8d` ,`q9text` ,`q9a` ,`q9b` ,`q9c` ,`q9d` ,`q10text` ,`q10a` ,`q10b` ,`q10c` ,`q10d`)
+VALUES (
 
-								//echo "Template Added! <a href='account.php'> Return to account. </a>;";
+    NULL ,
+    '". $_SESSION['UserID'] ."',
+    '$name',
+    '$q1',
+    '$a1',
+    '$b1',
+    '$c1',
+    '$d1',
+    '$q2',
+    '$a2',
+    '$b2',
+    '$c2',
+    '$d2',
+    '$q3',
+    '$a3',
+    '$b3',
+    '$c3',
+    '$d3',
+    '$q4',
+    '$a4',
+    '$b4',
+    '$c4',
+    '$d4',
+    '$q5',
+    '$a5',
+    '$b5',
+    '$c5',
+    '$d5',
+    '$q6',
+    '$a6',
+    '$b6',
+    '$c6',
+    '$d6',
+    '$q7',
+    '$a7',
+    '$b7',
+    '$c7',
+    '$d7',
+    '$q8',
+    '$a8',
+    '$b8',
+    '$c8',
+    '$d8',
+    '$q9',
+    '$a9',
+    '$b9',
+    '$c9',
+    '$d9',
+    '$q10',
+    '$a10',
+    '$b10',
+    '$c10',
+    '$d10'
+);";
+
+								mysql_query($addtemplatesql);
+								echo "Template Added! <a href='account.php'> Return to account. </a>;"
 
 ?>
