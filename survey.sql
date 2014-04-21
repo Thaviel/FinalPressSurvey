@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2014 at 06:01 PM
+-- Generation Time: Apr 21, 2014 at 07:29 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -139,15 +139,7 @@ CREATE TABLE IF NOT EXISTS `survey` (
   `q10d` text NOT NULL,
   PRIMARY KEY (`Survey_ID`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `survey`
---
-
-INSERT INTO `survey` (`Survey_ID`, `user_ID`, `name`, `dateStamp`, `q1text`, `q1a`, `q1b`, `q1c`, `q1d`, `q2text`, `q2a`, `q2b`, `q2c`, `q2d`, `q3text`, `q3a`, `q3b`, `q3c`, `q3d`, `q4text`, `q4a`, `q4b`, `q4c`, `q4d`, `q5text`, `q5a`, `q5b`, `q5c`, `q5d`, `q6text`, `q6a`, `q6b`, `q6c`, `q6d`, `q7text`, `q7a`, `q7b`, `q7c`, `q7d`, `q8text`, `q8a`, `q8b`, `q8c`, `q8d`, `q9text`, `q9a`, `q9b`, `q9c`, `q9d`, `q10text`, `q10a`, `q10b`, `q10c`, `q10d`) VALUES
-(1, 2, 'New Survey', '4848484848', 'adfsrr', 'fhj', 'gfjhgfjhgf', 'jhgfjhgfjhg', 'fjhgfjhgf', 'jhgfjhgfjh', 'gfjhgfjhgf', 'jhgfhjgfj', 'hgfjhgfjhgf', 'jhgfjhgf', 'jhgfjhgfjhg', 'fjhgfjh', 'gfjhgfj', 'hgfjhgf', 'hjgfjhgfj', 'gfjhgf', 'jhgfjhg', 'fjhgfjhg', 'fjhgfjh', 'gfjhgfjhgfjhgfjh', 'gfjhgfj', 'hgfjhg', 'fjhgfj', 'hgfjhgfjhgfj', 'hgfjh', 'gfjhgfj', 'hgfjh', 'gfjhgf', 'jhgfj', 'hgfjhgfjh', 'fhjgfj', 'hgfjhgfjh', 'gfjhgf', 'jhgfjh', 'gfjh', 'gfhjgf', 'jhgf', 'jhgf', 'jhgf', 'jhgf', 'jhgfj', 'hgfjhg', 'fjhgfj', 'hgfjhg', 'fjhgfj', 'hgfjhg', 'fjhgfj', 'hgfjh', 'gfjhgf', 'jhgffjhgfjh and a monkey sdkfjsdfkj'),
-(2, 2, 'MySecond survy', '1010101010101', 'kjhbkjhbjk', 'hbkjbhkjhb', 'kjbhkjbhkjb', 'hkjbhkjbh', 'kjbhkjbh', 'kjbhkjbh', 'kjhbkj', 'bhkjbhkj', 'bhkjbh', 'kjhbkj', 'bhkjhb', 'kjbhkj', 'hbkjbhkj', 'bhkjhb', 'kjbh', 'kjhb', 'kjbh', 'kjhb', 'kj', 'bhkj', 'hbk', 'jbh', 'kjb', 'hkj', 'hbkj', 'hb', 'kjh', 'bkj', 'b', 'kjh', 'bkj', 'hb', 'kj', 'bhkj', 'bh', 'kj', 'bh', 'kj', 'bhkjbh', 'kjbhkj', 'bhkjbh', 'kjbhljh', 'blj', 'h;kljhlkjhlihykg', 'yuh', 'oijhud', 'gfhjukl', 'oijhugtfhjukl', 'hjgtfhjkl', 'ijhuygtfhyjkil');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -209,17 +201,8 @@ CREATE TABLE IF NOT EXISTS `surveytemplate` (
   `q10b` text NOT NULL,
   `q10c` text NOT NULL,
   `q10d` text NOT NULL,
-  PRIMARY KEY (`SurveyTemplate_ID`),
-  UNIQUE KEY `user_ID` (`user_ID`),
-  UNIQUE KEY `user_ID_2` (`user_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
-
---
--- Dumping data for table `surveytemplate`
---
-
-INSERT INTO `surveytemplate` (`SurveyTemplate_ID`, `user_ID`, `name`, `q1text`, `q1a`, `q1b`, `q1c`, `q1d`, `q2text`, `q2a`, `q2b`, `q2c`, `q2d`, `q3text`, `q3a`, `q3b`, `q3c`, `q3d`, `q4text`, `q4a`, `q4b`, `q4c`, `q4d`, `q5text`, `q5a`, `q5b`, `q5c`, `q5d`, `q6text`, `q6a`, `q6b`, `q6c`, `q6d`, `q7text`, `q7a`, `q7b`, `q7c`, `q7d`, `q8text`, `q8a`, `q8b`, `q8c`, `q8d`, `q9text`, `q9a`, `q9b`, `q9c`, `q9d`, `q10text`, `q10a`, `q10b`, `q10c`, `q10d`) VALUES
-(3, 2, '[name]', 'q1', '1a', '1b', '1c', '1d', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'vthing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing', 'thing');
+  PRIMARY KEY (`SurveyTemplate_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -234,24 +217,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(256) NOT NULL,
   PRIMARY KEY (`User_ID`),
   UNIQUE KEY `username` (`username`,`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`User_ID`, `username`, `password`, `email`) VALUES
-(2, 'test', 'test', 'test@email');
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `surveytemplate`
---
-ALTER TABLE `surveytemplate`
-  ADD CONSTRAINT `surveytemplate_ibfk_1` FOREIGN KEY (`user_ID`) REFERENCES `user` (`User_ID`);
+(2, 'test', 'test', 'test@email'),
+(3, 'qwe', 'qwe', 'joepeshy'),
+(4, '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
