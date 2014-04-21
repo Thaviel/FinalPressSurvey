@@ -75,7 +75,7 @@ echo "</table>";
 				</div>
 				</br>
 				</br>				
-				<!--This is where users change their password-->
+
 				<div class="boxed-border">
 				<h2>My Templates</h2>
 				<p>here you can change, create, and release survey templates.</p>
@@ -95,12 +95,12 @@ while($row = mysql_fetch_array($resulttemplate))
   echo "<tr>";
   echo "<td>" . $row['name']."</td>";
   $survtemplateID = $row['SurveyTemplate_ID'];
-  $link= "template.php?key=" . $survtemplateID;
+  $link= "viewtemplate.php?key=" . $survtemplateID;
   echo "<td> <a href='$link'>Edit/Publish</a> </td>";
   echo "</tr>";
 }
 echo "</table>";
-echo "<a href='template.php?key=new'>Add...</a>";
+echo "<a href='template.php'>Add...</a>";
 				?>
 				
 				</div>	
