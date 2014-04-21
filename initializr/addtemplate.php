@@ -54,6 +54,165 @@ $b10=$_POST['10b'];
 $c10=$_POST['10c'];
 $d10=$_POST['10d'];
 
+
+// To protect MySQL injection (more detail about MySQL injection)
+
+$name = stripslashes($name);
+$name = mysql_real_escape_string($name);
+
+$q1 = stripslashes($q1);
+$q1 = mysql_real_escape_string($q1);
+
+$a1 = stripslashes($a1);
+$a1 = mysql_real_escape_string($a1);
+
+$b1 = stripslashes($b1);
+$b1 = mysql_real_escape_string($b1);
+
+$c1 = stripslashes($c1);
+$c1 = mysql_real_escape_string($c1);
+
+$d1 = stripslashes($d1);
+$d1 = mysql_real_escape_string($d1);
+
+$q2 = stripslashes($q2);
+$q2 = mysql_real_escape_string($q2);
+
+$a2 = stripslashes($a2);
+$a2 = mysql_real_escape_string($a2);
+
+$b2 = stripslashes($b2);
+$b2 = mysql_real_escape_string($b2);
+
+$c2 = stripslashes($c2);
+$c2 = mysql_real_escape_string($c2);
+
+$d2 = stripslashes($d2);
+$d2 = mysql_real_escape_string($d2);
+
+$q3 = stripslashes($q3);
+$q3 = mysql_real_escape_string($q3);
+
+$a3 = stripslashes($a3);
+$a3 = mysql_real_escape_string($a3);
+
+$b3 = stripslashes($b3);
+$b3 = mysql_real_escape_string($b3);
+
+$c3 = stripslashes($c3);
+$c3 = mysql_real_escape_string($c3);
+
+$d3 = stripslashes($d3);
+$d3 = mysql_real_escape_string($d3);
+
+$q4 = stripslashes($q4);
+$q4 = mysql_real_escape_string($q4);
+
+$a4 = stripslashes($a4);
+$a4 = mysql_real_escape_string($a4);
+
+$b4 = stripslashes($b4);
+$b4 = mysql_real_escape_string($b4);
+
+$c4 = stripslashes($c4);
+$c4 = mysql_real_escape_string($c4);
+
+$d4 = stripslashes($d4);
+$d4 = mysql_real_escape_string($d4);
+
+$q5 = stripslashes($q5);
+$q5 = mysql_real_escape_string($q5);
+
+$a5 = stripslashes($a5);
+$a5 = mysql_real_escape_string($a5);
+
+$b5 = stripslashes($b5);
+$b5 = mysql_real_escape_string($b5);
+
+$c5 = stripslashes($c5);
+$c5 = mysql_real_escape_string($c5);
+
+$d5 = stripslashes($d5);
+$d5 = mysql_real_escape_string($d5);
+
+$q6 = stripslashes($q6);
+$q6 = mysql_real_escape_string($q6);
+
+$a6 = stripslashes($a6);
+$a6 = mysql_real_escape_string($a6);
+
+$b6 = stripslashes($b6);
+$b6 = mysql_real_escape_string($b6);
+
+$c6 = stripslashes($c6);
+$c6 = mysql_real_escape_string($c6);
+
+$d6 = stripslashes($d6);
+$d6 = mysql_real_escape_string($d6);
+
+$q7 = stripslashes($q7);
+$q7 = mysql_real_escape_string($q7);
+
+$a7 = stripslashes($a7);
+$a7 = mysql_real_escape_string($a7);
+
+$b7 = stripslashes($b7);
+$b7 = mysql_real_escape_string($b7);
+
+$c7 = stripslashes($c7);
+$c7 = mysql_real_escape_string($c7);
+
+$d7 = stripslashes($d7);
+$d7 = mysql_real_escape_string($d7);
+
+$q8 = stripslashes($q8);
+$q8 = mysql_real_escape_string($q8);
+
+$a8 = stripslashes($a8);
+$a8 = mysql_real_escape_string($a8);
+
+$b8 = stripslashes($b8);
+$b8 = mysql_real_escape_string($b8);
+
+$c8 = stripslashes($c8);
+$c8 = mysql_real_escape_string($c8);
+
+$d8 = stripslashes($d8);
+$d8 = mysql_real_escape_string($d8);
+
+$q9 = stripslashes($q9);
+$q9 = mysql_real_escape_string($q9);
+
+$a9 = stripslashes($a9);
+$a9 = mysql_real_escape_string($a9);
+
+$b9 = stripslashes($b9);
+$b9 = mysql_real_escape_string($b9);
+
+$c9 = stripslashes($c9);
+$c9 = mysql_real_escape_string($c9);
+
+$d9 = stripslashes($d9);
+$d9 = mysql_real_escape_string($d9);
+
+$q10 = stripslashes($q10);
+$q10 = mysql_real_escape_string($q10);
+
+$a10 = stripslashes($a10);
+$a10 = mysql_real_escape_string($a10);
+
+$b10 = stripslashes($b10);
+$b10 = mysql_real_escape_string($b10);
+
+$c10 = stripslashes($c10);
+$c10 = mysql_real_escape_string($c10);
+
+$d10 = stripslashes($d10);
+$d10 = mysql_real_escape_string($d10);
+
+
+
+
 //concatinate a string together to submit to sql
 $addtemplatesql="
 INSERT INTO  `survey`.`surveytemplate` (
@@ -114,8 +273,7 @@ VALUES (
     '$c10',
     '$d10'
 );";
-								echo $addtemplatesql;
-								mysql_query($addtemplatesql);
-								echo "Template Added! <a href='account.php'> CLICK </a>;"
+
+								echo "Template Added! <a href='account.php'> Return to account. </a>;"
 
 ?>
