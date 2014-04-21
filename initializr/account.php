@@ -95,14 +95,12 @@ while($row = mysql_fetch_array($resulttemplate))
   echo "<tr>";
   echo "<td>" . $row['name']."</td>";
   $survtemplateID = $row['SurveyTemplate_ID'];
-  echo $survtemplateID;
   $link= "template.php?key=" . $survtemplateID;
-  echo($link);
   echo "<td> <a href='$link'>Edit/Publish</a> </td>";
   echo "</tr>";
 }
 echo "</table>";
-echo "<a href='template.php?key=new'>Add...</a>"
+echo "<a href='template.php?key=new'>Add...</a>";
 				?>
 				
 				</div>	

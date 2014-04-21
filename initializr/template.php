@@ -1,3 +1,4 @@
+<?php require'connect.php';?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -43,125 +44,125 @@
                     <h1>Survey Title</h1>
                 </header>
 
-				<form id='login' action='' method='post' accept-charset='UTF-8'>
+				<form id='login' action='addtemplate.php' method='post' accept-charset='UTF-8'>
                 
-					<input id="Title" type="text" />
+					<input name="Title" id="Title" type="text" />
 
 					<h2>Question 1</h2>
-					<textarea id="TextArea1" cols="60" rows="2"></textarea>
+					<textarea name= "q1" id="q1" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="a1" type="text" />
+					<input name="1a" id="1a" type="text" />
 					<p>B: </p>
-					<input id="b1" type="text" />
+					<input name="1b" id="1b" type="text" />
 					<p>C: </p>
-					<input id="c1" type="text" />
+					<input name="1c" id="1c" type="text" />
 					<p>D: </p>
-					<input id="d1" type="text" />
+					<input name="1d" id="1d" type="text" />
 
 
 					<h2>Question 2</h2>
-					<textarea id="TextArea2" cols="60" rows="2"></textarea>
+					<textarea name="q2" id="q2" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="2a" type="text" />
+					<input name="2a" id="2a" type="text" />
 					<p>B: </p>
-					<input id="2b" type="text" />
+					<input name="2b" id="2b" type="text" />
 					<p>C: </p>
-					<input id="2c" type="text" />
+					<input name="2c" id="2c" type="text" />
 					<p>D: </p>
-					<input id="2d" type="text" />
+					<input name="2d" id="2d" type="text" />
 
 					<h2>Question 3</h2>
-					<textarea id="TextArea3" cols="60" rows="2"></textarea>
+					<textarea name="q3" id="q3" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="3a" type="text" />
+					<input name="3a" id="3a" type="text" />
 					<p>B: </p>
-					<input id="3b" type="text" />
+					<input name="3b" id="3b" type="text" />
 					<p>C: </p>
-					<input id="3c" type="text" />
+					<input name="3c" id="3c" type="text" />
 					<p>D: </p>
-					<input id="3d" type="text" />
+					<input name="3d" id="3d" type="text" />
 
 					<h2>Question 4</h2>
-					<textarea id="TextArea4" cols="60" rows="2"></textarea>
+					<textarea name="q4" id="q4" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="4a" type="text" />
+					<input name="4a" id="4a" type="text" />
 					<p>B: </p>
-					<input id="4b" type="text" />
+					<input name="4b" id="4b" type="text" />
 					<p>C: </p>
-					<input id="4c" type="text" />
+					<input name="4c" id="4c" type="text" />
 					<p>D: </p>
-					<input id="4d" type="text" />
+					<input name="4d" id="4d" type="text" />
 
 
 
 					<h2>Question 5</h2>
-					<textarea id="TextArea5" cols="60" rows="2"></textarea>
+					<textarea name="q5" id="q5" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="5a" type="text" />
+					<input name="5a" id="5a" type="text" />
 					<p>B: </p>
-					<input id="5b" type="text" />
+					<input name="5b" id="5b" type="text" />
 					<p>C: </p>
-					<input id="5c" type="text" />
+					<input name="5c" id="5c" type="text" />
 					<p>D: </p>
-					<input id="5d" type="text" />
+					<input name="5d" id="5d" type="text" />
 
 					<h2>Question 6</h2>
-					<textarea id="TextArea6" cols="60" rows="2"></textarea>
+					<textarea name="q6" id="q6" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="6a" type="text" />
+					<input name="6a" id="6a" type="text" />
 					<p>B: </p>
-					<input id="6b" type="text" />
+					<input name="6b" id="6b" type="text" />
 					<p>C: </p>
-					<input id="6c" type="text" />
+					<input name="6c" id="6c" type="text" />
 					<p>D: </p>
-					<input id="6d" type="text" />
+					<input name="6d" id="6d" type="text" />
 
 
 					<h2>Question 7</h2>
-					<textarea id="TextArea7" cols="60" rows="2"></textarea>
+					<textarea name="q7" id="q7" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="7a" type="text" />
+					<input name="7a" id="7a" type="text" />
 					<p>B: </p>
-					<input id="7b" type="text" />
+					<input name="7b" id="7b" type="text" />
 					<p>C: </p>
-					<input id="7c" type="text" />
+					<input name="7c" id="7c" type="text" />
 					<p>D: </p>
-					<input id="7d" type="text" />
+					<input name="7d" id="7d" type="text" />
 
 					<h2>Question 8</h2>
-					<textarea id="TextArea8" cols="60" rows="2"></textarea>
+					<textarea name="q8" id="q8" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="8a" type="text" />
+					<input name="8a" id="8a" type="text" />
 					<p>B: </p>
-					<input id="8b" type="text" />
+					<input name="8b" id="8b" type="text" />
 					<p>C: </p>
-					<input id="8c" type="text" />
+					<input name="8c" id="8c" type="text" />
 					<p>D: </p>
-					<input id="8d" type="text" />
+					<input name="8d" id="8d" type="text" />
 
 
 					<h2>Question 9</h2>
-					<textarea id="TextArea9" cols="60" rows="2"></textarea>
+					<textarea name="q9" id="q9" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="9a" type="text" />
+					<input name="9a" id="9a" type="text" />
 					<p>B: </p>
-					<input id="9b" type="text" />
+					<input name="9b" id="9b" type="text" />
 					<p>C: </p>
-					<input id="9c" type="text" />
+					<input name="9c" id="9c" type="text" />
 					<p>D: </p>
-					<input id="9d" type="text" />
+					<input name="9d" id="9d" type="text" />
 
 
 					<h2>Question 10</h2>
-					<textarea id="TextArea10" cols="60" rows="2"></textarea>
+					<textarea name="q10" id="q10" cols="60" rows="2"></textarea>
 					<p>A: </p>
-					<input id="10a" type="text" />
+					<input name="10a" id="10a" type="text" />
 					<p>B: </p>
-					<input id="10b" type="text" />
+					<input name="10b" id="10b" type="text" />
 					<p>C: </p>
-					<input id="10c" type="text" />
+					<input name="10c" id="10c" type="text" />
 					<p>D: </p>
-					<input id="10d" type="text" />
+					<input name="10d" id="10d" type="text" />
 
 					</br>
 					</br>
@@ -177,77 +178,15 @@
 							//if key is new, use an add query
 							if($_GET['key']=='new')
 							{
-							//sql statement to add what the user inputted into the table
-								$addtemplatesql="
-								
-								INSERT INTO  `survey`.`surveytemplate` (
-`SurveyTemplate_ID` ,
-`user_ID` ,
-`name` ,
-`q1text` ,
-`q1a` ,
-`q1b` ,
-`q1c` ,
-`q1d` ,
-`q2text` ,
-`q2a` ,
-`q2b` ,
-`q2c` ,
-`q2d` ,
-`q3text` ,
-`q3a` ,
-`q3b` ,
-`q3c` ,
-`q3d` ,
-`q4text` ,
-`q4a` ,
-`q4b` ,
-`q4c` ,
-`q4d` ,
-`q5text` ,
-`q5a` ,
-`q5b` ,
-`q5c` ,
-`q5d` ,
-`q6text` ,
-`q6a` ,
-`q6b` ,
-`q6c` ,
-`q6d` ,
-`q7text` ,
-`q7a` ,
-`q7b` ,
-`q7c` ,
-`q7d` ,
-`q8text` ,
-`q8a` ,
-`q8b` ,
-`q8c` ,
-`q8d` ,
-`q9text` ,
-`q9a` ,
-`q9b` ,
-`q9c` ,
-`q9d` ,
-`q10text` ,
-`q10a` ,
-`q10b` ,
-`q10c` ,
-`q10d`
-)
-VALUES (
-NULL ,  '2',  '[name]',  'q1',  '1a',  '1b',  '1c',  '1d',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing', 'thing',  'thing',  'thing',  'thing',  'vthing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing',  'thing', 'thing',  'thing',  'thing',  'thing'
-);
-
-								
-								";
-								echo $addtemplatesql;
-								mysql_query($addtemplatesql);
-								echo "Template Added!";
+							//submit to addtemplate to add to the current list of templates
+							 header( 'Location: addtemplate.php' ) ;
+							
 							}else{
-							echo "Saved Changes!";
-							}
+							
+								echo "Saved Changes!";
 							//if key is not new, use the value of key as the //templateid and update that one.
+							
+							}
 					} 
 					else if (isset($_POST['publish'])) 
 					{

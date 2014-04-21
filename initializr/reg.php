@@ -17,24 +17,25 @@ $myemail = mysql_real_escape_string($myemail);
 $sql="SELECT * FROM $tbl_name WHERE Username='$myusername'";
 $result=mysql_query($sql);
 $count=mysql_num_rows($result);
+
+$sql2="SELECT * FROM $tbl_name WHERE Password='$myemail'";
+$result2=mysql_query($sql2);
+$count2=mysql_num_rows($result2);
+
 if($count){
-	echo'your username is taken try '. $myusername. " " . rand() . ' <a href="javascript:history.back()">Back</a>';
+	echo'your username is taken try '. $myusername. rand() ." ";
 
-	} else {
+}elseif($count2){
+	echo'your already registered';
+		
+}else{
+			
+		$sql = "INSERT INTO `survey`.`user` (`User_ID`, `username`, `password`, `email`) VALUES (NULL, '$myusername', '$mypassword', '$myemail');";
+		mysql_query($sql);
+		echo 'New user registered.';
+}
 
-		$sql="SELECT * FROM $tbl_name WHERE Password='$myemail'";
-		$result=mysql_query($sql);
-		$count=mysql_num_rows($result);
-		
-		} if($count){
-		echo'your already registered' . '<a href="javascript:history.back()">Back</a>';
-		
-			}else{
-			
-			$sql = "INSERT INTO `survey`.`user` (`User_ID`, `username`, `password`, `email`) VALUES (NULL, '$myusername', '$mypassword', '$myemail');";
-			mysql_query($sql);
-			
-			}
+echo '<a href="javascript:history.back()">Back</a>';
 
 
 
