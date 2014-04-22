@@ -100,12 +100,13 @@
 				$q10b=$row["q10b"];
 				$q10c=$row["q10c"];
 				$q10d=$row["q10d"];
-?>
 
-				<form id='login' action='addtemplate.php' method='post' accept-charset='UTF-8'>
+
+				?>
+				<form id='login' action="edittemplatesql.php" method='post' accept-charset='UTF-8'>
                 
 					<input name="Title" id="Title" type="text" value="<?= $title?>" />
-
+					<input name="templateID" id="templateID" type="hidden" value="<?= $survid?>"/>
 					<h2>Question 1</h2>
 					<textarea name= "q1" id="q1" cols="60" rows="2"> <?= $q1text?> </textarea>
 					<p>A: </p>
@@ -228,26 +229,6 @@
 					
 				</form>
 
-				<?php 
-					if (isset($_POST['save'])) {
-							//if key is new, use an add query
-							if($_GET['key']=='new')
-							{
-							//submit to addtemplate to add to the current list of templates
-							 header( 'Location: addtemplate.php' ) ;
-							
-							}else{
-							
-								echo "Saved Changes!";
-							//if key is not new, use the value of key as the //templateid and update that one.
-							
-							}
-					} 
-					else if (isset($_POST['publish'])) 
-					{
-							echo"Survey has been published";
-					} 
-				?>
                </article>
         </div>
         <!-- #main -->

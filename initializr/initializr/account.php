@@ -59,14 +59,28 @@ echo "<table border='1'>
 <th>View results</th>
 </tr>";
 
+//time variables to calculate expiry
+$currentdate = new DateTime();
+$currenttime = $currentdate->format('U');
+$tendays = 864000;
+
 while($row = mysql_fetch_array($result))
 {
+$days= intval($row['dateStamp']);
+
+//subtract the time it is now, from when it was created to get the amount of time it's been alive
+$activetime=$currenttime-$days;
+//calculate remaining time based on how long it's been up subtracted from the max 10 days
+$remainingtime=$tendays-$activetime;
+//show time remaining in days
+$displaytime=$remainingtime/86400;
+
   echo "<tr>";
   echo "<td>" . $row['name']."</td>";
-  echo "<td>" . $row['dateStamp']."</td>";
+  echo "<td>" . ceil($displaytime) ."</td>";
   $survID = $row['Survey_ID'];
   $link= "results.php?key=" . $survID;
-  echo "<td> <a href='$link'>Edit</a> </td>";
+  echo "<td> <a href='$link'>View</a> </td>";
   echo "</tr>";
 }
 echo "</table>";

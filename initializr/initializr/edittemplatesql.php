@@ -1,73 +1,59 @@
-<?php
-require'connect.php';
+<?php 
+include "connect.php"; 
 
-//so we take the number from the url and the user id fromt he cookie to make a query to post O GOD NO
-// same looking table except 4th thingy is a datestamp gud I guess.
-
-
-$survid = htmlspecialchars($_GET["key"]);
-$userid = $_SESSION['UserID'];
-
-$sql="SELECT * FROM surveytemplate WHERE SurveyTemplate_ID=$survid;";
-$result=mysql_query($sql);
-
-$row = mysql_fetch_array($result);
-
-				//we make a current datestamp
-				$date = new DateTime();
-				$dbDate = $date->format('U');
-				
-				$name=$row["name"];
-				$q1=$row["q1text"];
-				$a1=$row["q1a"];
-				$b1=$row["q1b"];
-				$c1=$row["q1c"];
-				$d1=$row["q1d"];
-				$q2=$row["q2text"];
-				$a2=$row["q2a"];
-				$b2=$row["q2b"];
-				$c2=$row["q2c"];
-				$d2=$row["q2d"];
-				$q3=$row["q3text"];
-				$a3=$row["q3a"];
-				$b3=$row["q3b"];
-				$c3=$row["q3c"];
-				$d3=$row["q3d"];
-				$q4=$row["q4text"];
-				$a4=$row["q4a"];
-				$b4=$row["q4b"];
-				$c4=$row["q4c"];
-				$d4=$row["q4d"];
-				$q5=$row["q5text"];
-				$a5=$row["q5a"];
-				$b5=$row["q5b"];
-				$c5=$row["q5c"];
-				$d5=$row["q5d"];
-				$q6=$row["q6text"];
-				$a6=$row["q6a"];
-				$b6=$row["q6b"];
-				$c6=$row["q6c"];
-				$d6=$row["q6d"];
-				$q7=$row["q7text"];
-				$a7=$row["q7a"];
-				$b7=$row["q7b"];
-				$c7=$row["q7c"];
-				$d7=$row["q7d"];
-				$q8=$row["q8text"];
-				$a8=$row["q8a"];
-				$b8=$row["q8b"];
-				$c8=$row["q8c"];
-				$d8=$row["q8d"];
-				$q9=$row["q9text"];
-				$a9=$row["q9a"];
-				$b9=$row["q9b"];
-				$c9=$row["q9c"];
-				$d9=$row["q9d"];
-				$q10=$row["q10text"];
-				$a10=$row["q10a"];
-				$b10=$row["q10b"];
-				$c10=$row["q10c"];
-				$d10=$row["q10d"];
+//save all posts from template.php as php variables
+$templateID=$_POST['templateID'];
+$name=$_POST['Title']; 
+$q1=$_POST['q1'];
+$a1=$_POST['1a'];
+$b1=$_POST['1b'];
+$c1=$_POST['1c'];
+$d1=$_POST['1d'];
+$q2=$_POST['q2'];
+$a2=$_POST['2a'];
+$b2=$_POST['2b'];
+$c2=$_POST['2c'];
+$d2=$_POST['2d'];
+$q3=$_POST['q3'];
+$a3=$_POST['3a'];
+$b3=$_POST['3b'];
+$c3=$_POST['3c'];
+$d3=$_POST['3d'];
+$q4=$_POST['q4'];
+$a4=$_POST['4a'];
+$b4=$_POST['4b'];
+$c4=$_POST['4c'];
+$d4=$_POST['4d'];
+$q5=$_POST['q5'];
+$a5=$_POST['5a'];
+$b5=$_POST['5b'];
+$c5=$_POST['5c'];
+$d5=$_POST['5d'];
+$q6=$_POST['q6'];
+$a6=$_POST['6a'];
+$b6=$_POST['6b'];
+$c6=$_POST['6c'];
+$d6=$_POST['6d'];
+$q7=$_POST['q7'];
+$a7=$_POST['7a'];
+$b7=$_POST['7b'];
+$c7=$_POST['7c'];
+$d7=$_POST['7d'];
+$q8=$_POST['q8'];
+$a8=$_POST['8a'];
+$b8=$_POST['8b'];
+$c8=$_POST['8c'];
+$d8=$_POST['8d'];
+$q9=$_POST['q9'];
+$a9=$_POST['9a'];
+$b9=$_POST['9b'];
+$c9=$_POST['9c'];
+$d9=$_POST['9d'];
+$q10=$_POST['q10'];
+$a10=$_POST['10a'];
+$b10=$_POST['10b'];
+$c10=$_POST['10c'];
+$d10=$_POST['10d'];
 
 
 // To protect MySQL injection (more detail about MySQL injection)
@@ -227,69 +213,65 @@ $d10 = mysql_real_escape_string($d10);
 
 
 
-$addsurveysql="
-INSERT INTO  `survey`.`survey` (
-`Survey_ID` , `user_ID` , `name`, `datestamp` , `q1text` , `q1a` , `q1b` ,`q1c` ,`q1d` ,`q2text` ,`q2a` ,`q2b` ,`q2c` ,`q2d` ,`q3text` ,`q3a` ,`q3b` ,`q3c` ,`q3d` ,`q4text` ,`q4a` ,`q4b` ,`q4c` ,`q4d` ,`q5text` ,`q5a` ,`q5b` ,`q5c` ,`q5d` ,`q6text` ,`q6a` ,`q6b` ,`q6c` ,`q6d` ,`q7text` ,`q7a` ,`q7b` ,`q7c` ,`q7d` ,`q8text` ,`q8a` ,`q8b` ,`q8c` ,`q8d` ,`q9text` ,`q9a` ,`q9b` ,`q9c` ,`q9d` ,`q10text` ,`q10a` ,`q10b` ,`q10c` ,`q10d`)
-VALUES (
 
-    NULL ,
-    '". $_SESSION['UserID'] ."',
-    '$name',
-    '$dbDate',
-    '$q1',
-    '$a1',
-    '$b1',
-    '$c1',
-    '$d1',
-    '$q2',
-    '$a2',
-    '$b2',
-    '$c2',
-    '$d2',
-    '$q3',
-    '$a3',
-    '$b3',
-    '$c3',
-    '$d3',
-    '$q4',
-    '$a4',
-    '$b4',
-    '$c4',
-    '$d4',
-    '$q5',
-    '$a5',
-    '$b5',
-    '$c5',
-    '$d5',
-    '$q6',
-    '$a6',
-    '$b6',
-    '$c6',
-    '$d6',
-    '$q7',
-    '$a7',
-    '$b7',
-    '$c7',
-    '$d7',
-    '$q8',
-    '$a8',
-    '$b8',
-    '$c8',
-    '$d8',
-    '$q9',
-    '$a9',
-    '$b9',
-    '$c9',
-    '$d9',
-    '$q10',
-    '$a10',
-    '$b10',
-    '$c10',
-    '$d10'
-);";
-		mysql_query($addsurveysql);
-		echo "Template published! <a href='account.php'> Return to account. </a>;"
+//concatinate a string together to submit to sql
+$edittemplatesql="
+UPDATE `survey`.`surveytemplate` SET
+`name` ='$name',
+`q1text` ='$q1',
+`q1a` ='$a1',
+`q1b` ='$b1',
+`q1c` ='$c1',
+`q1d` ='$d1',
+`q2text` ='$q2',
+`q2a` ='$a2',
+`q2b` ='$b2',
+`q2c` ='$c2',
+`q2d` ='$d2',
+`q3text` ='$q3',
+`q3a` ='$a3',
+`q3b` ='$b3',
+`q3c` ='$c3',
+`q3d` ='$d3',
+`q4text` ='$q4',
+`q4a` ='$a4',
+`q4b` ='$b4',
+`q4c` ='$c4',
+`q4d` ='$d4',
+`q5text` ='$q5',
+`q5a` ='$a5',
+`q5b` ='$b5',
+`q5c` ='$c5',
+`q5d` ='$d5',
+`q6text` ='$q6',
+`q6a` ='$a6',
+`q6b` ='$b6',
+`q6c` ='$c6',
+`q6d` ='$d6',
+`q7text` ='$q7',
+`q7a` ='$a7',
+`q7b` ='$b7',
+`q7c` ='$c7',
+`q7d` ='$d7',
+`q8text` ='$q8',
+`q8a` ='$a8',
+`q8b` ='$b8',
+`q8c` ='$c8',
+`q8d` ='$d8',
+`q9text` ='$q9',
+`q9a` ='$a9',
+`q9b` ='$b9',
+`q9c` ='$c9',
+`q9d` ='$d9',
+`q10text` ='$q10',
+`q10a` ='$a10',
+`q10b` ='$b10',
+`q10c` ='$c10',
+`q10d` ='$d10'
+WHERE
+`surveytemplate`.`SurveyTemplate_ID` ='$templateID'";
 
-
+								mysql_query($edittemplatesql);
+								echo "Template Modified! <a href='account.php'> Return to account. </a>;"
 
 ?>
