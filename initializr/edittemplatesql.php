@@ -2,6 +2,7 @@
 include "connect.php"; 
 
 //save all posts from template.php as php variables
+$templateID=$_POST['templateID'];
 $name=$_POST['Title']; 
 $q1=$_POST['q1'];
 $a1=$_POST['1a'];
@@ -214,67 +215,63 @@ $d10 = mysql_real_escape_string($d10);
 
 
 //concatinate a string together to submit to sql
-$addtemplatesql="
-INSERT INTO  `survey`.`surveytemplate` (
-`SurveyTemplate_ID` , `user_ID` , `name` , `q1text` , `q1a` , `q1b` ,`q1c` ,`q1d` ,`q2text` ,`q2a` ,`q2b` ,`q2c` ,`q2d` ,`q3text` ,`q3a` ,`q3b` ,`q3c` ,`q3d` ,`q4text` ,`q4a` ,`q4b` ,`q4c` ,`q4d` ,`q5text` ,`q5a` ,`q5b` ,`q5c` ,`q5d` ,`q6text` ,`q6a` ,`q6b` ,`q6c` ,`q6d` ,`q7text` ,`q7a` ,`q7b` ,`q7c` ,`q7d` ,`q8text` ,`q8a` ,`q8b` ,`q8c` ,`q8d` ,`q9text` ,`q9a` ,`q9b` ,`q9c` ,`q9d` ,`q10text` ,`q10a` ,`q10b` ,`q10c` ,`q10d`)
-VALUES (
+$edittemplatesql="
+UPDATE `survey`.`surveytemplate` SET
+`name` ='$name',
+`q1text` ='$q1',
+`q1a` ='$a1',
+`q1b` ='$b1',
+`q1c` ='$c1',
+`q1d` ='$d1',
+`q2text` ='$q2',
+`q2a` ='$a2',
+`q2b` ='$b2',
+`q2c` ='$c2',
+`q2d` ='$d2',
+`q3text` ='$q3',
+`q3a` ='$a3',
+`q3b` ='$b3',
+`q3c` ='$c3',
+`q3d` ='$d3',
+`q4text` ='$q4',
+`q4a` ='$a4',
+`q4b` ='$b4',
+`q4c` ='$c4',
+`q4d` ='$d4',
+`q5text` ='$q5',
+`q5a` ='$a5',
+`q5b` ='$b5',
+`q5c` ='$c5',
+`q5d` ='$d5',
+`q6text` ='$q6',
+`q6a` ='$a6',
+`q6b` ='$b6',
+`q6c` ='$c6',
+`q6d` ='$d6',
+`q7text` ='$q7',
+`q7a` ='$a7',
+`q7b` ='$b7',
+`q7c` ='$c7',
+`q7d` ='$d7',
+`q8text` ='$q8',
+`q8a` ='$a8',
+`q8b` ='$b8',
+`q8c` ='$c8',
+`q8d` ='$d8',
+`q9text` ='$q9',
+`q9a` ='$a9',
+`q9b` ='$b9',
+`q9c` ='$c9',
+`q9d` ='$d9',
+`q10text` ='$q10',
+`q10a` ='$a10',
+`q10b` ='$b10',
+`q10c` ='$c10',
+`q10d` ='$d10'
+WHERE
+`surveytemplate`.`SurveyTemplate_ID` ='$templateID'";
 
-    NULL ,
-    '". $_SESSION['UserID'] ."',
-    '$name',
-    '$q1',
-    '$a1',
-    '$b1',
-    '$c1',
-    '$d1',
-    '$q2',
-    '$a2',
-    '$b2',
-    '$c2',
-    '$d2',
-    '$q3',
-    '$a3',
-    '$b3',
-    '$c3',
-    '$d3',
-    '$q4',
-    '$a4',
-    '$b4',
-    '$c4',
-    '$d4',
-    '$q5',
-    '$a5',
-    '$b5',
-    '$c5',
-    '$d5',
-    '$q6',
-    '$a6',
-    '$b6',
-    '$c6',
-    '$d6',
-    '$q7',
-    '$a7',
-    '$b7',
-    '$c7',
-    '$d7',
-    '$q8',
-    '$a8',
-    '$b8',
-    '$c8',
-    '$d8',
-    '$q9',
-    '$a9',
-    '$b9',
-    '$c9',
-    '$d9',
-    '$q10',
-    '$a10',
-    '$b10',
-    '$c10',
-    '$d10'
-);";
-
-								mysql_query($addtemplatesql);
-								echo "Template Added! <a href='account.php'> Return to account. </a>;"
+								mysql_query($edittemplatesql);
+								echo "Template Modified! <a href='account.php'> Return to account. </a>;"
 
 ?>
